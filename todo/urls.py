@@ -35,7 +35,5 @@ urlpatterns = [
     # Djoser
     path('api/auth/', include('djoser.urls')),
     path('api/auth/', include('djoser.urls.authtoken'))
-] + [
-    static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
-    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    ]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
